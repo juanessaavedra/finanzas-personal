@@ -3,7 +3,7 @@
 -- Users must be in this table to successfully sign up or sign in
 
 CREATE TABLE public.trusted_users (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   email TEXT NOT NULL UNIQUE,
   added_by UUID REFERENCES auth.users(id) ON DELETE SET NULL,
   added_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc'::text, NOW()) NOT NULL,

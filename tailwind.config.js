@@ -13,6 +13,8 @@ export default {
         trust: '#003366',
         primary: '#0F172A',
         background: '#F3F4F6',
+        foreground: '#0F172A',
+        border: '#E5E7EB',
         navy: {
           50: '#E6EEF5',
           100: '#B3CDE0',

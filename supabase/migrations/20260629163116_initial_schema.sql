@@ -33,7 +33,7 @@ CREATE POLICY "Users can insert own profile"
 
 -- Create categories table
 CREATE TABLE public.categories (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID NOT NULL REFERENCES public.users(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
   icon_name TEXT NOT NULL,
@@ -69,7 +69,7 @@ CREATE POLICY "Users can delete own categories"
 
 -- Create transactions table
 CREATE TABLE public.transactions (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID NOT NULL REFERENCES public.users(id) ON DELETE CASCADE,
   category_id UUID NOT NULL REFERENCES public.categories(id) ON DELETE RESTRICT,
   type TEXT NOT NULL CHECK (type IN ('income', 'expense')),
@@ -112,7 +112,7 @@ CREATE POLICY "Users can delete own transactions"
 
 -- Create budgets table
 CREATE TABLE public.budgets (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID NOT NULL REFERENCES public.users(id) ON DELETE CASCADE,
   category_id UUID NOT NULL REFERENCES public.categories(id) ON DELETE CASCADE,
   amount NUMERIC(15, 2) NOT NULL CHECK (amount > 0),

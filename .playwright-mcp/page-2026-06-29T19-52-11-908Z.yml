@@ -1,0 +1,25 @@
+- generic [ref=e2]:
+  - region "Notifications alt+T"
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - heading "Finanzas Personales" [level=1] [ref=e10]
+      - paragraph [ref=e11]: Gestiona tus ingresos y gastos de forma inteligente
+    - generic [ref=e12]:
+      - heading "Iniciar Sesión" [level=2] [ref=e13]
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - text: Email
+          - generic [ref=e16]:
+            - img [ref=e17]
+            - textbox "Email" [ref=e20]:
+              - /placeholder: tu@email.com
+        - generic [ref=e21]:
+          - text: Contraseña
+          - generic [ref=e22]:
+            - img [ref=e23]
+            - textbox "Contraseña" [ref=e26]:
+              - /placeholder: ••••••••
+        - button "Iniciar Sesión" [ref=e27] [cursor=pointer]
+      - paragraph [ref=e29]: 🔒 Aplicación segura con protección de rate limiting y cifrado de datos
+    - paragraph [ref=e30]: © 2024 Finanzas Personales - Desarrollado con React + Supabase

@@ -50,7 +50,7 @@ export const LoginPage = () => {
 
         {/* Login Card */}
         <Card className="p-8 shadow-2xl">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl font-bold text-white mb-6">
             Iniciar Sesión
           </h2>
 
@@ -100,7 +100,7 @@ export const LoginPage = () => {
             {/* Submit Button */}
             <Button
               type="submit"
-              className="w-full bg-trust hover:bg-navy-600"
+              className="w-full bg-trust hover:bg-navy-600 text-white"
               size="lg"
               disabled={isLoading}
             >
@@ -114,19 +114,7 @@ export const LoginPage = () => {
               )}
             </Button>
           </form>
-
-          {/* Security Notice */}
-          <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-            <p className="text-xs text-gray-600 text-center">
-              🔒 Aplicación segura con protección de rate limiting y cifrado de datos
-            </p>
-          </div>
         </Card>
-
-        {/* Footer */}
-        <p className="text-center text-navy-200 text-sm mt-6">
-          © 2024 Finanzas Personales - Desarrollado con React + Supabase
-        </p>
       </div>
     </div>
   );
